@@ -56,7 +56,7 @@ function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center landscape:items-start overflow-hidden py-20 md:py-0 landscape:pt-32">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2000&auto=format&fit=crop" 
@@ -98,7 +98,7 @@ function HomePage() {
         </div>
         
         {/* Floating Stats */}
-        <div className="absolute bottom-8 left-0 right-0 lg:left-auto lg:right-12 flex flex-row justify-center lg:justify-end gap-6 sm:gap-8 px-4">
+        <div className="absolute bottom-8 left-0 right-0 lg:left-auto lg:right-12 flex flex-row justify-center lg:justify-end gap-6 sm:gap-8 px-4 z-20">
           <div className="text-center">
             <div className="text-2xl sm:text-3xl font-serif font-bold text-amber-400">48h</div>
             <div className="text-[10px] sm:text-xs uppercase tracking-widest text-stone-300">Fermentação</div>
@@ -144,7 +144,7 @@ function HomePage() {
       </section>
 
       {/* Nossa História Section */}
-      <section id="about" className="py-24 bg-brand-cream overflow-hidden">
+      <section id="about" className="py-16 md:py-24 bg-brand-cream overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -225,7 +225,7 @@ function HomePage() {
       </section>
 
       {/* Chef AI Section */}
-      <section id="chef-ai" className="py-16 md:py-24 bg-brand-red text-white overflow-hidden relative">
+      <section id="chef-ai" className="py-16 md:py-24 min-h-[500px] bg-brand-red text-white overflow-hidden relative flex items-center">
         <div className="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
           <ChefHat className="w-full h-full rotate-12" />
         </div>
@@ -329,10 +329,10 @@ export default function App() {
   return (
     <div className="min-h-screen bg-brand-cream font-sans text-stone-900">
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled || location.pathname !== '/' ? 'bg-brand-red/95 backdrop-blur-md shadow-lg py-3' : 'bg-transparent py-6'}`}>
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled || location.pathname !== '/' ? 'bg-brand-red/95 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-4 md:py-6'}`}>
         <div className="container mx-auto px-4 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2">
-            <div className="flex items-center justify-center h-24 md:h-36 w-auto">
+            <div className={`flex items-center justify-center w-auto transition-all duration-500 ${isScrolled ? 'h-20 md:h-28' : 'h-28 sm:h-32 md:h-56'} landscape:h-16 landscape:sm:h-20`}>
               <img 
                 src="https://lh3.googleusercontent.com/d/1dDzL0DKiVhx2CfyGUob2_mcwWeQhTuBG"
                 alt="Logo" 
@@ -368,8 +368,8 @@ export default function App() {
                   <MenuIcon className="w-6 h-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="bg-brand-cream">
-                <div className="flex flex-col gap-6 mt-12 text-lg font-medium">
+              <SheetContent side="right" className="bg-brand-cream overflow-y-auto">
+                <div className="flex flex-col gap-6 mt-12 text-lg font-medium pb-8">
                   <Link to="/menu">Cardápio</Link>
                   <a href="/#about">Nossa História</a>
                   <a href="/#chef-ai">Chef AI</a>
@@ -397,7 +397,7 @@ export default function App() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-1 md:col-span-1">
               <div className="flex items-center gap-2 mb-6">
-                <div className="flex items-center justify-center h-10 w-auto">
+                <div className="flex items-center justify-center h-20 md:h-32 w-auto">
                   <img 
                     src="https://lh3.googleusercontent.com/d/1pIZwqUb-izcFU5F9_AWdffg6nWHh1NgU" 
                     alt="Logo" 
@@ -405,7 +405,7 @@ export default function App() {
                     referrerPolicy="no-referrer"
                   />
                 </div>
-                <span className="font-serif text-xl font-bold tracking-tight text-white">Isaque Pizzas e Esfihas</span>
+                <span className="font-serif text-2xl md:text-3xl font-bold tracking-tight text-white">Isaque Pizzas e Esfihas</span>
               </div>
               <p className="mb-6 leading-relaxed">
                 Trazendo a tradição napolitana para o coração da cidade. Pizzas feitas com alma e paixão.

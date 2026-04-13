@@ -334,7 +334,7 @@ export default function App() {
           <Link to="/" className="flex items-center gap-2">
             <div className={`flex items-center justify-center w-auto transition-all duration-500 ${isScrolled ? 'h-20 md:h-28' : 'h-28 sm:h-32 md:h-56'} landscape:h-16 landscape:sm:h-20`}>
               <img 
-                src="https://lh3.googleusercontent.com/d/1dDzL0DKiVhx2CfyGUob2_mcwWeQhTuBG"
+                src="https://lh3.googleusercontent.com/d/1HWL4GeVg-yiSLei76Npr0zZG7mlGtW2d"
                 alt="Logo" 
                 className="h-full w-auto object-contain"
                 referrerPolicy="no-referrer"
